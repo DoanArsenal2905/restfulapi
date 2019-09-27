@@ -23,6 +23,6 @@ app.get('/api/user/retrieve', UserController.retrieve)
 app.delete('/api/user/delete', UserController.delete)
 
 // Start Server
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Server is running on port: ${port}...`)
 })
